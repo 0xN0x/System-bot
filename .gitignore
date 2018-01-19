@@ -1,0 +1,11 @@
+Ressources/web/**
+views/**
+node_modules/*
+system-web.js
+settings.json
+Info.json
+Ressources/images/**
+**/logs
+.eslintrc
+.eslintrc.json
+.jshintrc

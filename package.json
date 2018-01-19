@@ -1,0 +1,21 @@
+{
+  "name": "system",
+  "version": "0.31.0",
+  "description": "a moderative discord bot",
+  "main": "system.js",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "moment": "^2.19.1",
+    "discord.js": "^11.1.0",
+    "superagent": "^3.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/Shiigehiro/System-bot.git",
+  "author": "akaneko",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Shiigehiro/System-bot/issues"
+  }
+}
