@@ -12,7 +12,7 @@ Thanks you for all. Thanks you for use my bot and support me :3 :D
 You can pledge money on my Patreon (link below). All the donations are used for System and for improve it. All donation will give something back like the donators role on the System Lounge (More information on the Patreon page).
 
 =======================
-[Patreon](https://www.patreon.com/Shigehiro_)
+[Patreon](https://www.patreon.com/Shiigehiro)
 [Paypal](https://www.paypal.me/Shigehiro)
 [Support server invite](${client.settings.support})
 =======================`,

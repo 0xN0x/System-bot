@@ -240,7 +240,7 @@ system.updateGuild = function() {
       'url': `https://discordbots.org/api/bots/${client.user.id}/stats`,
       'headers': {
         'content-type': 'application/json',
-        'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEzODMzODcwNDkzNzcxMzY2NCIsImlhdCI6MTQ5MzE0ODIxNH0.mu8H15KIfwXvV4X8Wh_2_ssImCiz3i56oQ9uOwSA6dE'
+        'Authorization': client.settings.dborg
       },
       'json': true,
       body: {
