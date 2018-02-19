@@ -1,0 +1,30 @@
+{
+	"token": "your_token",
+	"osutoken": "your_token",
+	"carbonitex": "your_token",
+	"discordbot": "your_token",
+	"dborg": "your_token",
+	"discordbotfr": "your_token",
+	"discordlist": "your_token",
+	"datadog": {
+		"user": "your_username",
+		"pass": "your_password"
+	},
+	"mysql": {
+		"host": "localhost",
+		"user": "user",
+		"password": "password",
+		"database": "db"
+	},
+	"guildhook": {
+		"id":"hook_id",
+		"token":"hook_token"
+	},
+	"prefix": "$$",
+	"ownerid": "138338704937713664",
+	"author": "Shiigehiro#0164",
+	"invite": "https://discordapp.com/oauth2/authorize?permissions=268954646&client_id=226393343385403403&scope=bot",
+	"support": "https://discord.gg/wfTrpkg",
+	"website": "https://shiigehiro.github.io/system/"
+}
+
