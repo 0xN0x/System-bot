@@ -192,10 +192,10 @@ system.getUser = function(message, search) {
 system.findImage = function(folder) {
   if (!folder) return;
 
-  var pics = fs.readdirSync(`${process.cwd()}/Ressources/images/${folder}/`);
+  var pics = fs.readdirSync(`${process.cwd()}/src/ressources/images/${folder}/`);
  	var rand = Math.floor((Math.random()*(pics.length-1)));
 	var ext = pics[rand].split('.')[1];
-  return [`${process.cwd()}/Ressources/images/${folder}/${pics[rand]}`, ext];
+  return [`${process.cwd()}/src/ressources/images/${folder}/${pics[rand]}`, ext];
 }
 
 system.updateGuild = function() {

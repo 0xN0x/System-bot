@@ -1,10 +1,10 @@
-Ressources/Translation/**
+src/ressources/Translation/**
 Setup/*
 node_modules/*
 settings.json
 Info.json
-Ressources/working
-Ressources/images/**
+src/ressources/working
+src/ressources/images/**
 **/logs
 .eslintrc
 .eslintrc.json

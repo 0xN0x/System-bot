@@ -2,16 +2,16 @@ var Jimp = require("jimp");
 
 exports.run = (client, message, args) => {
   if (message.mentions.users.first() && message.mentions.users.first().avatarURL) { var avatar = message.mentions.users.first().avatarURL }
-  else if (message.mentions.users.first()) { var avatar = process.cwd()+"/Ressources/images/default.png" }
+  else if (message.mentions.users.first()) { var avatar = process.cwd()+"/src/ressources/images/default.png" }
   else if (message.author.avatarURL) { var avatar = message.author.avatarURL }
-  else { var avatar = process.cwd()+"/Ressources/images/default.png" }
+  else { var avatar = process.cwd()+"/src/ressources/images/default.png" }
 
-  Jimp.read(process.cwd()+"/Ressources/images/600x400white.jpg", function (err, lenna) {
+  Jimp.read(process.cwd()+"/src/ressources/images/600x400white.jpg", function (err, lenna) {
     if (err) throw err;
     Jimp.read(avatar, function (err, image) {
     	image.resize(175, 135)
     	lenna.composite(image, 213, 110);
-      Jimp.read(process.cwd()+"/Ressources/images/tableau2.png", function (err, image2) {
+      Jimp.read(process.cwd()+"/src/ressources/images/tableau2.png", function (err, image2) {
       	lenna.composite(image2, 0, 0);
         lenna.getBuffer(Jimp.MIME_PNG, (err, buffer) => {
           message.channel.send({

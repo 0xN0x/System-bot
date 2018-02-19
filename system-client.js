@@ -24,10 +24,10 @@ const log = message => {
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
-fs.readdir(`${__dirname}/Ressources/Commands/`, (err, files) => {
+fs.readdir(`${__dirname}/src/ressources/Commands/`, (err, files) => {
   if (err) console.error(err);
   files.forEach(f => {
-    let props = require(`${__dirname}/Ressources/Commands/${f}`);
+    let props = require(`${__dirname}/src/ressources/Commands/${f}`);
     //log(`Loading Command: ${props.help.name}. 👌`);
     client.commands.set(props.help.name, props);
     props.conf.aliases.forEach(alias => {
@@ -39,8 +39,8 @@ fs.readdir(`${__dirname}/Ressources/Commands/`, (err, files) => {
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
-      delete require.cache[require.resolve(`${__dirname}/Ressources/Commands/${command}`)];
-      let cmd = require(`${__dirname}/Ressources/Commands/${command}`);
+      delete require.cache[require.resolve(`${__dirname}/src/ressources/Commands/${command}`)];
+      let cmd = require(`${__dirname}/src/ressources/Commands/${command}`);
       client.commands.delete(command);
       client.aliases.forEach((cmd, alias) => {
         if (cmd === command) client.aliases.delete(alias);

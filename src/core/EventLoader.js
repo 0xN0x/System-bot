@@ -1,4 +1,4 @@
-const reqEvent = (event) => require(`../Ressources/Events/${event}`);
+const reqEvent = (event) => require(`../ressources/Events/${event}`);
 module.exports = client => {
   client.on('ready', () => reqEvent('ready')(client));
   client.on('message', reqEvent('message'));

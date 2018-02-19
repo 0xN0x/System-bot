@@ -2,7 +2,7 @@ exports.run = (client, message, args) => {
   if (message.mentions.users.first()) {
     message.channel.send(`**${message.mentions.users.first().username}** got tickled by **${message.author.username}**`, {
       file: {
-        attachment: `${process.cwd()}/Ressources/images/tickle.gif`,
+        attachment: `${process.cwd()}/src/ressources/images/tickle.gif`,
         name: 'tickle.gif'
       }
     })
