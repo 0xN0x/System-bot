@@ -1,9 +1,6 @@
 exports.run = (client, message, args) => {
-  let coin = Math.round(Math.random()*1)+1;
-	let flip = {
-		"1":"Heads !",
-		"2":"Tails !"
-	}
+  let coin = Math.round(Math.random()*1);
+	let flip = ["Heads !", "Tails !"]
 	message.channel.send({
     embed: {
       description: flip[coin],
