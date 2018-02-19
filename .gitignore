@@ -1,7 +1,6 @@
 Ressources/Translation/**
 Setup/*
 node_modules/*
-src/*
 settings.json
 Info.json
 Ressources/working
