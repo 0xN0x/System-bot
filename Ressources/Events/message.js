@@ -1,5 +1,5 @@
 var colog = require('colog');
-const settings = require(`../../Core/settings.json`);
+const settings = require(`../../core/settings.json`);
 
 let lastcmd = {};
 

@@ -5,9 +5,9 @@ const mysql = require("mysql");
 const Discord = require('discord.js');
 var DataDog = require('datadog');
 global.client = new Discord.Client();
-client.settings = require(`${__dirname}/Core/settings.json`);
-global.system = require(`${__dirname}/Core/utils.js`)
-require(`${__dirname}/Core/EventLoader`)(client);
+client.settings = require(`${__dirname}/src/core/settings.json`);
+global.system = require(`${__dirname}/src/core/utils.js`)
+require(`${__dirname}/src/core/EventLoader`)(client);
 
 client.mysql = mysql.createConnection({
   host            : client.settings.mysql.host,
