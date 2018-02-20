@@ -58,7 +58,7 @@ if (system.permission(cmd.conf.permLevel)[1] === "DEV" && message.author.id !== 
       }
     } else {
       client.mysql.query('INSERT INTO guilds SET ?', {g_id: message.guild.id, prefix: "$$"});
-      console.log('[ERROR] Need upgrade DB')
+      system.log('Need upgrade DB', 'error')
     }
   });
 };

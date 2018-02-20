@@ -1,5 +1,4 @@
 exports.run = (client, message, args) => {
-  console.log('1')
   let prefix = message.content.split(' ')[1];
 	if (!prefix) return system.shortsend(message.channel, `Try with : \`$$prefix [the prefix you want]\``);
 	if (prefix.length > 20) return system.shortsend(message.channel, `Prefix can't contain more than 20 letters.`);
