@@ -4,7 +4,7 @@
   "description": "Moderative and user-friendly discord bot",
   "main": "system.js",
   "dependencies": {
-    "chalk": "^1.1.3",
+    "chalk": "^2.3.1",
     "colog": "^1.0.4",
     "curlrequest": "^1.0.1",
     "datadog": "^1.0.1",
