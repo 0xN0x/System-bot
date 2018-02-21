@@ -1,0 +1,13 @@
+src/ressources/translation/**
+Setup/*
+node_modules/*
+src/core/settings.json
+Info.json
+src/ressources/working/**
+src/ressources/images/**
+**/logs
+.eslintrc
+.jshintrc
+npm-debug.log
+package-lock.json
+
