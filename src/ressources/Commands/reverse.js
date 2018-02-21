@@ -1,19 +1,20 @@
-var flip = require('flip-text')
+var flip = require("flip-text");
 
 exports.run = (client, message, args) => {
-  if (args) return message.channel.send(flip(args));
+	if(args) return message.channel.send(flip(args));
+	else return false;
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 1,
-  type: 5
+	enabled: true,
+	guildOnly: false,
+	aliases: [],
+	permLevel: 1,
+	type: 5
 };
 
 exports.help = {
-  name: `reverse`,
-  description: `Reverse a text.`,
-  usage: `${client.settings.prefix}reverse <text>`
+	name: `reverse`,
+	description: `Reverse a text.`,
+	usage: `${client.settings.prefix}reverse <text>`
 };

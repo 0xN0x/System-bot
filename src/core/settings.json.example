@@ -6,6 +6,7 @@
 	"dborg": "token",
 	"discordbotfr": "token",
 	"discordlist": "token",
+	"mashape": "token",
 	"datadog": {
 		"user": "username",
 		"pass": "password"
