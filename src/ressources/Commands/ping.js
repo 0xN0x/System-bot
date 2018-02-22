@@ -1,20 +1,14 @@
+const { RichEmbed } = require("discord.js");
+
 exports.run = (client, message) => {
 	let author = message.author;
 
-	message.channel.send({
-		embed: {
-			author: {
-				name: author.username,
-				icon_url: author.avatarURL
-			},
-			fields: [{
-				name: "Time of response",
-				value: `${client.pings[0]} ms`,
-				inline: true
-			}],
-			color: 0xFFFFFF
-		}
-	});
+	const embed = new RichEmbed()
+		.setAuthor(author.username, author.avatarURL)
+		.addField("Time of response", `${client.pings[0]} ms`)
+		.setColor('#ffffff');
+
+	message.channel.send({ embed });
 };
 
 exports.conf = {

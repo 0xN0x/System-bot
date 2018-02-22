@@ -50,5 +50,3 @@ process.on("unhandledRejection", err => {
 	if(err.stack.indexOf("Still spawning shards.") > -1) return;
 	system.log(err.stack, "error");
 });
-
-client.login(client.settings.token);

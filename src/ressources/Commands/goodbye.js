@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
 						client.mysql.query(`DELETE FROM goodbye WHERE gID = '${message.guild.id}'`);
 					} else {
 						// If goodbye message isn't already enabled, enable it
-						client.mysql.query(`INSERT INTO goodbye SET ?`, {gID: message.guild.id, cID: message.channel.id, message: " Goodbye {{user}}"});
+						client.mysql.query(`INSERT INTO goodbye SET ?`, {gID: message.guild.id, cID: message.channel.id, message: "Goodbye {{user}}, see you later in {{servername}}"});
 					}
 					const embed = new Discord.RichEmbed()
 						.setColor('#fffffe')
@@ -39,7 +39,7 @@ exports.run = (client, message, args) => {
 						.setTitle('Edit goodbye message')
 						.addField('Old goodbye message', rows[0].message)
 						.addField('New goodbye message', "Type the new message");
-					message.channel.send({embed});
+					message.channel.send({ embed });
 
 					const msg_filter = m => m.author.id === message.author.id && m.channel.id === message.channel.id;
 					const msg_collector = message.channel.createMessageCollector(msg_filter, { time: 120000 });
@@ -49,7 +49,7 @@ exports.run = (client, message, args) => {
 							.setColor('#fffffe')
 							.setTitle(':white_check_mark: Message updated')
 							.addField('New goodbye message', m.content);
-						message.channel.send({embed});
+						message.channel.send({ embed });
 						client.mysql.query(`UPDATE goodbye SET message = '${m.content}' WHERE gID = '${message.guild.id}'`)
 						msg_collector.stop();
 					});
