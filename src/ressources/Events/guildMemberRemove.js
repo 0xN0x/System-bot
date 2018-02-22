@@ -17,6 +17,19 @@ module.exports = (member) => {
 				}
 			});
 		}
+
+		return true;
+	});
+	client.mysql.query(`SELECT * FROM goodbye WHERE gID = "${member.guild.id}"`, function(err, rows, fields) {
+		if (err) return system.log(err, "error");
+		
+		if (rows && rows[0]) {
+			console.log("goodbyed !");
+			var goodbye = rows[0].message.split('{{user}}').join(`<@${member.id}>`);
+			goodbye = goodbye.split('{{servername}}').join(`${member.guild.name}`);
+			member.guild.channels.get(rows[0].cID).send(goodbye);
+		}
+
 		return true;
 	});
 };

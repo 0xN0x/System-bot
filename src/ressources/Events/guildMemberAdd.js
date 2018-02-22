@@ -19,6 +19,18 @@ module.exports = (member) => {
 		}
 		return true;
 	});
+	client.mysql.query(`SELECT * FROM welcome WHERE gID = "${member.guild.id}"`, function(err, rows, fields) {
+		if (err) return system.log(err, "error");
+		
+		if (rows && rows[0]) {
+			console.log("welcomed !")
+			var welcome = rows[0].message.split('{{user}}').join(`<@${member.id}>`);
+			welcome = welcome.split('{{servername}}').join(`${member.guild.name}`);
+			member.guild.channels.get(rows[0].cID).send(welcome);
+		}
+
+		return true;
+	});
 	if(member.guild.id === "229664634808958986") {
 		member.addRole("241575048937340929");
 	}
