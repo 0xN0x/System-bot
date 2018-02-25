@@ -1,6 +1,8 @@
 const fs = require("fs");
 const mysql = require("mysql");
 const Discord = require("discord.js");
+var mail = require("nodemailer").mail;
+
 global.client = new Discord.Client();
 client.settings = require(`${__dirname}/src/core/settings.json`);
 global.system = require(`${__dirname}/src/core/utils.js`);
@@ -50,3 +52,5 @@ process.on("unhandledRejection", err => {
 	if(err.stack.indexOf("Still spawning shards.") > -1) return;
 	system.log(err.stack, "error");
 });
+
+client.login(client.settings.token);

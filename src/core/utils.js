@@ -137,7 +137,7 @@ system.updateGuild = function() {
 	system.post.carbonitex();
 	system.post.discordbot();
 	system.post.discordlist();
-	system.post.dborg();
+	system.post.dbl();
 	system.post.discordbotfr();
 };
 
@@ -210,23 +210,21 @@ system.post.discordbotfr = function() {
 	});
 };
 
-system.post.dborg = function() {
-	client.shard.fetchClientValues("guilds.size").then(results => {
-		request.post({
-			url: `https://discordbots.org/api/bots/${client.user.id}/stats`,
-			headers: {
-				"content-type": "application/json",
-				Authorization: client.settings.dborg
-			},
-			json: true,
-			body: {
-				server_count: results.reduce((prev, val) => prev + val, 0),
-				shard_id: client.options.shardId,
-				shard_count: client.options.shardCount
-			}
-		}, (err) => {
-			if(err) system.log(err, "error");
-		});
+system.post.dbl = function() {
+	request.post({
+		url: `https://discordbots.org/api/bots/${client.user.id}/stats`,
+		headers: {
+			"content-type": "application/json",
+			Authorization: client.settings.dbl
+		},
+		json: true,
+		body: {
+			server_count: client.guilds.size,
+			shard_id: client.options.shardId,
+			shard_count: client.options.shardCount
+		}
+	}, (err) => {
+		if(err) system.log(err, "error");
 	});
 };
 

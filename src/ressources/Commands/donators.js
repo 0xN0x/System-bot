@@ -28,11 +28,11 @@ const donators = [
 	}
 ];
 
-const txt = "";
+var txt = "";
 donators.sort((a, b) => {
 	return b.amount - a.amount;
 }).forEach(donator => {
-	txt += `• ${donator.name} = ${donator.amount}$\n`
+	txt += `• ${donator.name} = ${donator.amount}$\n`;
 });
 
 exports.run = (client, message) => {

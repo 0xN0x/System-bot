@@ -1,31 +1,37 @@
-module.exports = client => {
+module.exports = async (client) => {
 	system.log("Shard started", "info");
 
-	saveStats();
-	function saveStats() {
-		system.post.datadog();
-		system.updateGuild();
-		setTimeout(() => {
-			saveStats();
-		}, 30000);
-	}
 
-	rotateGames(client, 0);
+	setTimeout(() => {
+		system.post.datadog();
+	}, 30000);
+
+	setInterval(() => {
+		system.updateGuild();
+		system.log("Stats send to bots list", "debug")
+    }, 1800000);
+
 	function rotateGames(i) {
 		client.shard.fetchClientValues("guilds.size").then(results => {
-			let games = [`⚔️ Need Help ? ${client.settings.prefix}help`, ` Dev by ${client.settings.author}`, `I'm in ${results.reduce((prev, val) => prev + val, 0)} servers`];
+			let games = [
+				` Need Help ? ${client.settings.prefix}help`,
+				` with ${client.settings.author}`,
+				` in ${results.reduce((prev, val) => prev + val, 0)} servers`
+			];
+
 			if(i >= games.length) i = 0;
 			client.user.setPresence({
-				status: "online",
+				status: "dnd",
 				game: {
 					name: games[i],
-					type: 0
+					type: "PLAYING"
 				}
 			});
 		});
 
 		setTimeout(() => {
-			rotateGames(client, ++i);
+			rotateGames(++i);
 		}, 10000);
 	}
+	rotateGames(0);
 };

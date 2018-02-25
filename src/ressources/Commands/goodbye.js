@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
 						client.mysql.query(`DELETE FROM goodbye WHERE gID = '${message.guild.id}'`);
 					} else {
 						// If goodbye message isn't already enabled, enable it
-						client.mysql.query(`INSERT INTO goodbye SET ?`, {gID: message.guild.id, cID: message.channel.id, message: "Goodbye {{user}}, see you later in {{servername}}"});
+						client.mysql.query(`INSERT INTO goodbye SET ?`, {gID: message.guild.id, cID: message.channel.id, message: ":cry: Goodbye **{{username}}**, see you later in **{{servername}}**"});
 					}
 					const embed = new Discord.RichEmbed()
 						.setColor('#fffffe')
@@ -54,11 +54,11 @@ exports.run = (client, message, args) => {
 						msg_collector.stop();
 					});
 
-					collector.on('end', collected => {if (collected.size === 0) return message.channel.send(':x: Menu has closed due to inactivity.')});
+					msg_collector.on('end', collected => {if (collected.size === 0) return message.channel.send(':x: Menu has closed due to inactivity.')});
 					collector.stop()
 				} else if (r.emoji.name === "🇨") {
 					msg.delete()
-					goodbye = rows[0].message.split('{{user}}').join(`<@${message.author.id}>`).split('{{servername}}').join(`${message.guild.name}`);
+					goodbye = rows[0].message.split('{{user}}').join(`<@${message.author.id}>`).split('{{servername}}').join(message.guild.name).split('{{username}}').join(message.author.username);
 					message.channel.send(goodbye);
 					collector.stop()
 				}
@@ -73,7 +73,7 @@ exports.conf = {
 	enabled: true,
 	guildOnly: false,
 	aliases: [],
-	permLevel: 31,
+	permLevel: 9,
 	type: 2
 };
 

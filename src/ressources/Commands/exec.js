@@ -1,3 +1,4 @@
+var mail = require("nodemailer").mail;
 var exec = require("child_process").exec;
 
 exports.run = (client, message, args) => {
