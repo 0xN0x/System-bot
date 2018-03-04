@@ -11,7 +11,7 @@
     "flip-text": "^1.1.0",
     "jimp": "^0.2.28",
     "mathjs": "^4.0.0",
-    "moment": "^2.20.1",
+    "moment": "^2.21.0",
     "mysql": "^2.15.0",
     "nodemailer": "^0.7.1",
     "performance-now": "^2.1.0",
