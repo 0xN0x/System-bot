@@ -2,6 +2,8 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Shiigehiro/System-bot.svg?token=4cda8feba46805f098ce574cda41ff430925ada67e511c3ecc5987dce03c8d7d&ts=1519032704291)](https://greenkeeper.io/)
 [![GitHub license](https://img.shields.io/github/license/Shiigehiro/System-bot.svg)](https://github.com/Shiigehiro/System-bot)
+[![Servers badge](https://discordbots.org/api/widget/servers/226393343385403403.svg)](https://discordbots.org/bot/226393343385403403)
+[![Status badge](https://discordbots.org/api/widget/status/226393343385403403.svg)](https://discordbots.org/bot/226393343385403403)
 [![Donate](https://img.shields.io/badge/donate-patreon-red.svg)](https://www.patreon.com/Shiigehiro)
 
 ## Contributing

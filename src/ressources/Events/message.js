@@ -9,7 +9,7 @@ module.exports = message => {
 
 	var patt = new RegExp("((http:\/\/)||(https://))(discord.gg/)");
 	if(patt.test(message.content) === true) {
-		if(message.guild.id === "229664634808958986") {
+		if(message.guild.id === "229664634808958986" && message.owner.id !== client.settings.ownerid) {
 			message.delete();
 			message.channel.send(`<@${message.author.id}>, Sending invite is not allowed`);
 			message.member.addRole("298499431081312256");
