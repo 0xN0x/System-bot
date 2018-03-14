@@ -1,6 +1,10 @@
 console.log("\x1Bc");
 
-const Discord = require("discord.js");
-const sharder = new Discord.ShardingManager(`${__dirname}/system-client.js`, { totalShards: 4, respawn: true });
+const settings = require(`${__dirname}/src/core/settings.json`);
 
-sharder.spawn(4);
+const Sharder = require('eris-sharder').Master;
+const sharder = new Sharder(settings.token, `/system-client.js`, {
+	stats: true,
+	debug: true,
+	guildsPerShard: 2200
+});
