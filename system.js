@@ -1,10 +1,4 @@
-console.log("\x1Bc");
+global.cluster = require("cluster");
 
-const settings = require(`${__dirname}/src/core/settings.json`);
-
-const Sharder = require('eris-sharder').Master;
-const sharder = new Sharder(settings.token, `/system-client.js`, {
-	stats: true,
-	debug: true,
-	guildsPerShard: 2200
-});
+if (cluster.isMaster) require('./src/master.js');
+else require('./src/worker.js');
