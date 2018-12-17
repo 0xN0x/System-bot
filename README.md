@@ -5,6 +5,7 @@
 [![Servers badge](https://discordbots.org/api/widget/servers/226393343385403403.svg)](https://discordbots.org/bot/226393343385403403)
 [![Status badge](https://discordbots.org/api/widget/status/226393343385403403.svg)](https://discordbots.org/bot/226393343385403403)
 [![Donate](https://img.shields.io/badge/donate-patreon-red.svg)](https://www.patreon.com/Shiigehiro)
+[![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/Q5Q6NFCC)
 
 ## Contributing
 
