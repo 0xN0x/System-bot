@@ -19,7 +19,7 @@
     "querystring": "^0.2.0",
     "request": "^2.85.0",
     "superagent": "^4.0.0",
-    "unirest": "^0.5.1",
+    "unirest": "^0.6.0",
     "weather-js": "^2.0.0",
     "winston": "^3.0.0",
     "xkcd-api": "^1.0.1",
