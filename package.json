@@ -18,7 +18,7 @@
     "pretty-ms": "^4.0.0",
     "querystring": "^0.2.0",
     "request": "^2.85.0",
-    "superagent": "^4.0.0",
+    "superagent": "^5.0.6",
     "unirest": "^0.6.0",
     "weather-js": "^2.0.0",
     "winston": "^3.0.0",
