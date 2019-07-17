@@ -54,7 +54,7 @@ module.exports = message => {
 					message.member.hasPermission(system.permission(cmd.conf.permLevel)[1])) {
 					cmd.run(client, message, params, rows[0]);
 				} else if(!message.member.hasPermission(system.permission(cmd.conf.permLevel)[1])) {
-					system.shortsend(message.channel, `:x: - You need \`${system.permission(cmd.conf.permLevel)[1]}\` permission to do this.`);
+					return system.shortsend(message.channel, `:x: - You need \`${system.permission(cmd.conf.permLevel)[1]}\` permission to do this.`);
 				}
 			}
 		} else {
