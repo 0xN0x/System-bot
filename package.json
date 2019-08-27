@@ -22,7 +22,7 @@
     "unirest": "^0.6.0",
     "weather-js": "^2.0.0",
     "winston": "^3.0.0",
-    "xkcd-api": "^1.0.1",
+    "xkcd-api": "^1.1.1",
     "xml2js": "^0.4.19"
   },
   "scripts": {
