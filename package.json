@@ -23,7 +23,7 @@
     "weather-js": "^2.0.0",
     "winston": "^3.0.0",
     "xkcd-api": "^1.0.1",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.22"
   },
   "scripts": {
     "test": "node system.js"
