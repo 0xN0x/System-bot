@@ -11,7 +11,7 @@
 
 ## Prefix
 
-* Default Prefix is ```$$```
+* Default Prefix is ```"$$"```
 
 ## Contributing
 
