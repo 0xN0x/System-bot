@@ -11,7 +11,7 @@
 
 ## Configuration
 
-* In the [settings.json.example](https://github.com/Computer-Man497/System-bot/blob/master/src/core/settings.json.example)
+* In the [settings.json.example](https://github.com/Computer-Man497/System-bot/blob/master/src/core/settings.json.example) You can find numerous settings which can be modified if you are going to self host.
 
 ## Contributing
 
