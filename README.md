@@ -9,6 +9,10 @@
 
 [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/Q5Q6NFCC)
 
+## Prefix
+
+* Default Prefix is ```$$```
+
 ## Contributing
 
 * Open a ticket for each bug/feature so it can be discussed
