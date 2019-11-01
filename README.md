@@ -9,9 +9,9 @@
 
 [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/Q5Q6NFCC)
 
-## Prefix
+## Configuration
 
-* Default Prefix is ```"$$"```
+* In the [settings.json.example](https://github.com/Computer-Man497/System-bot/blob/master/src/core/settings.json.example)
 
 ## Contributing
 
