@@ -17,7 +17,7 @@
     "performance-now": "^2.1.0",
     "pretty-ms": "^4.0.0",
     "querystring": "^0.2.0",
-    "request": "^2.85.0",
+    "request": "^2.88.2",
     "superagent": "^4.0.0",
     "unirest": "^0.6.0",
     "weather-js": "^2.0.0",
