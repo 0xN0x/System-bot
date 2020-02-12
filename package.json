@@ -15,7 +15,7 @@
     "mysql": "^2.15.0",
     "nodemailer": "^5.0.0",
     "performance-now": "^2.1.0",
-    "pretty-ms": "^4.0.0",
+    "pretty-ms": "^6.0.0",
     "querystring": "^0.2.0",
     "request": "^2.85.0",
     "superagent": "^4.0.0",
