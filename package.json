@@ -7,7 +7,7 @@
     "chalk": "^2.3.2",
     "colog": "^1.0.4",
     "curlrequest": "^1.0.1",
-    "discord.js": "^11.3.2",
+    "discord.js": "^12.0.1",
     "flip-text": "^1.1.0",
     "jimp": "^0.2.28",
     "mathjs": "^5.0.0",
